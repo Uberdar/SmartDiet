@@ -36,7 +36,6 @@
             <h1 class="main-header">Диета</h1>
             <div class="diet__slider">
                 <div class="slide-one">
-                   <!-- +++ FIXME: 1. slider__header елемент блока, але самого блока slider немає -->
                     <p class="diet__header">
                         Персональная и потому эффективная
                     </p>
@@ -60,14 +59,10 @@
     </div>
     <div class="service">
         <div class="service__container container">
-            <!-- FIXME: 2. header_h2 - глобальний стиль для заголовків. Краще такі класи називати як title, ttl, caption ... -->
-
             <h2 class="service__header header_h2">ЧТО ВХОДИТ В УСЛУГУ?</h2>
             <div class="service__block">
                 <div class="block">
                     <img src="pictures/service/1.png" alt="" class="service__img">
-                    <!-- FIXME: 3. h3, h4 краще робити одним заголовком, наприклад h3, всередині нього помістити тег small яким стилізувати менший текст. -->
-                    <!-- FIXME: 4. service__text елемент більше відноситься до block, тому краще було б block__text, але block занадто загальна назва, краще якось так: service-item > service-item__text (інші класи в цьому блоці також повинні бути сформовані схоже до цього) -->
                     <h3 class="service__first-header">Опрашиваем</h3>
                     <h4 class="service__second-header">по детальной анкете</h4>
                     <p class="service__text">Чтобы вы получили подробный скрининг потребностей совего организма</p>
@@ -98,40 +93,6 @@
                 Диета разрабатывается под каждого конкретного человека с учетом его биоритмов, гормонального фона,
                 группы крови и прочей предоставленной в анкете информации.
             </p>
-            <!--+++++FIXME: 5. в цьому блоці показані доступні курси. Краще класи називати інакше 
-                present__rows -> courses
-                present__row -> course
-
-                Але більш важливо, що тут неправильно використаний БЕМ.
-                theme_green виступає як модифікатор який додає колір для курсу.
-                
-                Потрібно було зробити так:
-
-                На блок .course додати модифікатори .course--green, .course--yellow, .course--carrot і від цього вже задавати стилі кольору
-
-                Взагалі по елементах цього блоку рекомендував би зробити так:
-
-                <div class="course course--green">
-                    <div class="course__head">
-                        <div class="course__duration">
-                            <span class="course__days-num">30</span>
-                            дней
-                        </div>
-                        <p class="course__info">Продолжительность курса</p>
-                    </div>
-                    <div class="course__body">
-                        <div class="course__price">
-                            <span class="course__price-num">999</span>
-                            <span class="course__currency">рублей</span>
-                        </div>
-                        <a href="" class="course__btn">Выбрать</a>
-                    </div>
-                </div>
-            -->
-
-
-
-
             <div class="courses">
                 <div class="course course--green courses__item">
                     <div class="course__head">
@@ -232,7 +193,6 @@
             <div class="personal__rows">
                 <div class="personal__row">
                     <img src="pictures/personal/1.png" alt="" class="personal__img">
-                    <!-- FIXME: 6. Тут та ж сама ситуація, що і в 3 -->
                     <h3 class="personal__row-header">Простая</h3>
                     <p class="personal__small-header">формула</p>
                     <p class="personal__text">
@@ -268,7 +228,6 @@
                 <div class="subscription__row">
                     <img src="pictures/subscription/check.png" alt="" class="subscription__img">
                     <div class="subscription__text">
-                        <!--++++++ В цьому випадку схоже на ситуацію, як у 3 і 6, але тут так і повинно бути, як ти зробив, бо це читається як окремі заголовки -->
                         <p class="subscription__row-header">Гибко</p>
                         <p class="subscription__row-text">Выбирайте длительность диеты, ориентируясь на желаемый
                             результат</p>
@@ -295,7 +254,6 @@
             </div>
         </div>
     </div>
-    <!--++++ FIXME: 7. Бажано уникати дублювання і стилізувати те, що є на десктопі -->
     <div class="prof-mob">
         <div class="container">
             <h2 class="prof-mob__header header_h2">Доверие к профессионалам</h2>
@@ -345,53 +303,6 @@
         </div>
 
     </div>
-    <!-- <div class="prof">
-        <div class="container">
-            <h2 class="prof__header header_h2">Доверие к профессионалам</h2>
-            <div class="prof__rows">
-                <div class="prof__row tamara">
-                    <div class="prof__all-text">
-                        <p class="prof__name">Тамара Еременко</p>
-                        <P class="prof__education">Закончила первый МГМУ имени И.М. Сеченова в 2002 году</P>
-                        <ul>
-                            <li>
-                                Ведущий специалист в диагностике всех видов метаболизма. Автор индивидуальных методик
-                                коррекции метаболизма и активизации липолиза.
-                            </li>
-                            <li>
-                                8 лет опыта в разработке меню с учетом соотношения приема белков, углеводов и жиров,
-                                чтобы организм получал все необходимые для здоровья элементы.
-                            </li>
-                            <li>
-                                Дипломированный эксперт в вопросах лекарственного сопровождения для корректировки техник
-                                питания.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="prof__row oleg">
-                    <div class="prof__all-text">
-                        <p class="prof__name">Олег Тарантинов</p>
-                        <P class="prof__education">Закончил РНИМУ имени Н.И. Пирогова в 2004 году</P>
-                        <ul>
-                            <li>
-                                Владеет узкопрофильными техниками по определению состава тела и расчету калорийности
-                                меню.
-                            </li>
-                            <li>
-                                Автор 38 запатентованных программ по питанию, с учетом физиологических особенностей
-                                организма и группы крови.
-                            </li>
-                            <li>
-                                Эксперт с 15-летним опытом в вопросах коррекции веса, наблюдает пациентов в динамике и
-                                ведет их до стабилизации веса.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="footer">
         <div class="footer__container container">
             <div class="left-side">
