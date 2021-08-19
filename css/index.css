@@ -719,7 +719,7 @@ body {
 
   .prof-mob .slick-slide {
     background-color: #d8f6fa;
-    background-image: url(/pictures/profmob/tamara.png);
+    background-image: url(../pictures/profmob/tamara.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
